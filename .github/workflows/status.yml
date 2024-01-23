@@ -3,8 +3,7 @@ name: run-tests
 on:
   pull_request:
     types: [opened, reopened]
-    branches:
-      - ACCMOBILE-317-PR
+
         
 env:
   BUILD_TOOL_VERSION: 32.0.0
