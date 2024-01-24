@@ -12,6 +12,7 @@ env:
 jobs:
   status_job:
     runs-on: ubuntu-latest
+    permissions: write-all
     steps:
     - name: Test
       id: try
