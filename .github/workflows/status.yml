@@ -18,7 +18,7 @@ jobs:
       run: |
         echo ${{github.repository}}
         echo ${{ github.event.pull_request.head.sha }} 
-        STATE="success"
+        STATE="failure"
         DESCRIPTION="The build succeeded!"
         curl -L \
          -X POST \
