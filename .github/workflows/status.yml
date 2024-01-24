@@ -23,7 +23,7 @@ jobs:
         echo ${{ github.event.pull_request.head.sha }}  
         echo ${{ steps.try.outcome}}
         TRY = 'trial'
-        if [ ${TRY} == 'trial' && "${{ steps.try.outcome}}" == 'success' ]; then
+        if [ 'trial' == 'trial' && "${{ steps.try.outcome}}" == 'success' ]; then
           STATE="success"
           DESCRIPTION="The build succeeded!"
         else
