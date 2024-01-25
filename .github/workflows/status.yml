@@ -25,15 +25,15 @@ jobs:
             $URL \
             -H "Content-Type: application/json" \
             -H "Authorization: token $GITHUB_TOKEN" \
-            --data - << EOF
-              {
-                "body": "| Test Type | Count |
-                         |-----------|-------|
-                         | Total     | 1     |
-                         | Passed    | 2 ✅ |
-                         | Failed    | 0 ❌ |
-                         | Skipped   | 2 ⏩ |"
-              }
+            --data @- << 'EOF'
+            {
+              "body": "| Test Type | Count |
+                        |-----------|-------|
+                        | Total     | 1     |
+                        | Passed    | 2 ✅   |
+                        | Failed    | 0 ❌   |
+                        | Skipped   | 2 ⏩   |"
+            }
             EOF
          
     - name: Set commit status (success)
