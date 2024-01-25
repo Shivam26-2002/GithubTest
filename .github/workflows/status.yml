@@ -26,17 +26,12 @@ jobs:
             -H "Content-Type: application/json" \
             -H "Authorization: token $GITHUB_TOKEN" \
             --data '{ "body": "| Test Type | Count |
-              |-----------|-------|
-              | Total     | 1     |
-              | Passed    | 2 ✅   |
-              | Failed    | 0 ❌   |
-              | Skipped   | 2 ⏩   |"}'
-
-
-
-
-            
-            # --data '{ "body": "Total tests 1, Passed ✅ 2, Failed ❌ 0 , Skipped ⏩ 2  GITHUB_WORKFLOW_URL = https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}"}'
+                              |-----------|-------|
+                              | Total     | 1     |
+                              | Passed    | 2 ✅   |
+                              | Failed    | 0 ❌   |
+                              | Skipped   | 2 ⏩   |"
+                    }'
          
     - name: Set commit status (success)
       env:
