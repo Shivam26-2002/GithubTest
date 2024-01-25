@@ -28,11 +28,11 @@ jobs:
             --data @- << 'EOF'
             {
               "body": "| Test Type | Count |
-                        |-----------|-------|
-                        | Total     | 1     |
-                        | Passed    | 2 ✅   |
-                        | Failed    | 0 ❌   |
-                        | Skipped   | 2 ⏩   |"
+                       |-----------|-------|
+                       | Total     | 1     |
+                       | Passed    | 2 ✅   |
+                       | Failed    | 0 ❌   |
+                       | Skipped   | 2 ⏩   |"
             }
             EOF
          
