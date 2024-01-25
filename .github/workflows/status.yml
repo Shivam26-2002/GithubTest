@@ -25,7 +25,7 @@ jobs:
             $URL \
             -H "Content-Type: application/json" \
             -H "Authorization: token $GITHUB_TOKEN" \
-            --data '{ "body": " Status | Value \n------------ | -------------\n Total test | 1 \n Pass | 2"}'
+            --data '{ "body": " Status | Value \n------------ | -------------\n Total test | 1 \n Pass | 2 \n Fail | 3 \n Skip | 1"}'
          
     - name: Set commit status (success)
       env:
