@@ -25,16 +25,7 @@ jobs:
             $URL \
             -H "Content-Type: application/json" \
             -H "Authorization: token $GITHUB_TOKEN" \
-            --data @- << 'EOF'
-            {
-              "body": "| Test Type | Count |
-                        |-----------|-------|
-                        | Total     | 1     |
-                        | Passed    | 2 ✅   |
-                        | Failed    | 0 ❌   |
-                        | Skipped   | 2 ⏩   |"
-            }
-            EOF
+            --data '{ "body": ""First Header | Second Header\n------------ | -------------\nContent from cell 1 | Content from cell 2\nContent in the first column | Content in the second column""}'
          
     - name: Set commit status (success)
       env:
