@@ -27,6 +27,12 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Store into variable
+        run: |
+          CACHE_HIT=${{ steps.cache-npm.outputs.cache-hit }}
+          echo "${{ steps.cache-npm.outputs.cache-hit }}"
+          echo "Value of cache is: $CACHE_HIT"
+
       - name: Test cache
         # if: ${{ steps.cache-npm.outputs.cache-hit != 'true' }}
         run: |
