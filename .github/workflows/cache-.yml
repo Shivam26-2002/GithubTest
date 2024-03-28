@@ -27,5 +27,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Test
+      - name: Test cache
+        if: ${{ steps.cache-npm.outputs.cache-hit != 'true' }}
         run: npm install
