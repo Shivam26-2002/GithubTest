@@ -1,0 +1,19 @@
+name: commit-message
+on: workflow_dispatch
+jobs:
+  message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Extract commit message
+        id: commit-message
+        if: always()
+        env:
+          COMMIT: ${{ github.event.head_commit.message }} 
+        run: |
+           npm install @actions/core
+           node - <<EOF
+             const core = require('@actions/core');
+             const message = process.env.COMMIT;
+             const result = message.split('Signed-off-by:')[0].trim();
+             core.setOutput('COMMIT_MESSAGE', result); 
+           EOF
