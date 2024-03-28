@@ -17,5 +17,4 @@ jobs:
              const result = message.split('Signed-off-by:')[0].trim();
              core.setOutput('COMMIT_MESSAGE', result); 
              console.log("Message is", result);
-             console.log("Message is", result);
            EOF
