@@ -14,7 +14,7 @@ jobs:
            node - <<EOF
              const core = require('@actions/core');
              const message = process.env.COMMIT;
-             console.log("JSON MEssage is ",${{ toJSON(github.event.head_commit.message) }})
+             console.log("JSON MEssage is ",${{ toJSON(github.event.head_commit.message) }});
              const result = message.split('Signed-off-by:')[0].trim();
              core.setOutput('COMMIT_MESSAGE', result); 
              const result_message = result.replace(/\n/g, ' ');
